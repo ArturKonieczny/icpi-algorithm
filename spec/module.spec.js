@@ -6,7 +6,7 @@ describe('module exports', () => {
     expect(icpi).to.be.a('function');
   });
 
-  it('should accept at lest one parameter', () => {
+  it('should accept at least two parameters', () => {
     expect(icpi.length).to.equal(2);
   });
 
