@@ -3,7 +3,7 @@ module.exports = function genCandidates(traits) {
 
   for (const traitOne of traits) {
     for (const traitTwo of traits) {
-      if (traitOne < traitTwo) {
+      if (Number(traitOne) < Number(traitTwo)) {
         candidates.push(`${traitOne},${traitTwo}`);
       }
     }
