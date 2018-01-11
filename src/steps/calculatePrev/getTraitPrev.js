@@ -4,8 +4,10 @@ module.exports = function getTraitPrev(instances, index, traitCount) {
   const helperObject = {};
 
   for (const instance of instances) {
-    if (!helperObject[instance]) {
-      helperObject[instance] = 1;
+    const pointID = instance[index];
+
+    if (!helperObject[pointID]) {
+      helperObject[pointID] = 1;
     }
   }
 

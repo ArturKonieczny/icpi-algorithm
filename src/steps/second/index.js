@@ -1,9 +1,6 @@
 const generateCandidates = require('./generateCandidates');
 const fillCandidate = require('./fillCandidate');
-
-function calculatePrev() {
-  // placeholder
-}
+const calculatePrev = require('../calculatePrev');
 
 module.exports = function secondStep(icpiTree, singleElementCollocations) {
   const traits = Object.keys(singleElementCollocations);
