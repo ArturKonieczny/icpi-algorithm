@@ -97,6 +97,6 @@ Collocation Object {instances: Array, trait1prev,...,traitnprev, prev}
       '3': 0.5,
       prev: 0.2
     }
-  }
-]
+  },
+...]
 ```
