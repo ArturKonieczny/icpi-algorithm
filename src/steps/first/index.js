@@ -1,3 +1,8 @@
+/**
+ * Finds 1-el collocations.
+ * @param  {Array}  pointData   Array of point Objects {id, trait, locationX, locationY}
+ * @return {Object}                           Hashmap of 2-el collocations. 
+ */
 module.exports = function firstStep(pointData) {
   const collocation = {};
 

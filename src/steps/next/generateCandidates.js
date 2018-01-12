@@ -1,4 +1,10 @@
-module.exports = function genCandidates(prevCollocations, minPrev) {
+/**
+ * Generates (3+)-el collocation candidates.
+ * @param  {Array}   prevCollocations           List of collocations found in n-1 step.
+ * @param  {Number} [minPrev=0]                 Minimum prevalence for collocation to be considered valid
+ * @return {Array}                              List of collocation candidates 'triat1,...,traitn'
+ */
+module.exports = function genCandidates(prevCollocations, minPrev = 0) {
   const candidates = [];
   const validPrevCandidates = [];
 
