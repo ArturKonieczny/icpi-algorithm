@@ -15,7 +15,7 @@ or simply download and "require" this repository.
 ```js
 const icpiAlgorithm = require('icpi-algorithm');
 
-const collocations = icpiAlgorithm(pointData, icpiTree, minPrev); // default minPrev is 0
+const collocations = icpiAlgorithm(pointData, icpiTree[, minPrev]); // default minPrev is 0
 
 ```
 
