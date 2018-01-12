@@ -5,7 +5,7 @@ Finds spatial collocations using iCPI-algorithm.
 ## Installation
 
 ```bash
-npm install icpi-tree
+npm install icpi-algorithm
 ```
 
 or simply download and "require" this repository.
