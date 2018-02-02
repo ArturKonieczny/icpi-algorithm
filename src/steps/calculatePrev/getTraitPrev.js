@@ -1,4 +1,5 @@
 const roundFactor = 100;
+
 /**
  * Calculates trait prevalence.
  * @param  {Array}  instances   List of all instances of given collocation.
@@ -6,6 +7,7 @@ const roundFactor = 100;
  * @param  {Number} traitCount  Number of all points with trait that is being calculated.
  * @return {Number}             Trait prevalence
  */
+
 module.exports = function getTraitPrev(instances, index, traitCount) {
   const helperObject = {};
 

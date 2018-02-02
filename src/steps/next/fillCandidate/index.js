@@ -1,4 +1,5 @@
 const generateInstances = require('./generateInstances');
+
 /**
  * Fills (3+)-el collocation candidate with instances.
  * @param  {String} candidate                 'trait1,...,traitn'
@@ -7,14 +8,15 @@ const generateInstances = require('./generateInstances');
  * @return {Array}                            List of all found instances in form of Array, each element is an Array of
  *                                            points that are part of an instance.
  */
+
 module.exports = function fillCandidate(candidate, prevCollocations, icpiTree) {
   const instances = [];
   const newTrait = candidate.slice(-1);
-  const mainChunkTraits = candidate.split(',').slice(0,-1);
+  const mainChunkTraits = candidate.split(',').slice(0, -1);
   const prevCollInstances = prevCollocations[mainChunkTraits.join(',')].instances;
 
   for (const prevCollInstance of prevCollInstances) {
-    instances.push.apply(instances, generateInstances(prevCollInstance, newTrait, icpiTree));
+    instances.push(...generateInstances(prevCollInstance, newTrait, icpiTree));
   }
 
   return instances;

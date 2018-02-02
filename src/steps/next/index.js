@@ -8,7 +8,7 @@ const calculatePrev = require('../calculatePrev');
  * @param  {Array}   prevCollocations           List of collocations found in n-1 step.
  * @param  {Object} singleElementCollocations   Hashmap of 1-el collocations.
  * @param  {Number} [minPrev=0]                 Minimum prevalence for collocation to be considered valid
- * @return {Object}                             Hashmap of (3+)-el collocations. 
+ * @return {Object}                             Hashmap of (3+)-el collocations.
  */
 module.exports = function next(icpiTree, prevCollocations, singleElementCollocations, minPrev = 0) {
   const candidates = generateCandidates(prevCollocations, minPrev);

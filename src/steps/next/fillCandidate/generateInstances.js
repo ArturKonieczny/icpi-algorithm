@@ -11,11 +11,9 @@ module.exports = function generateInstances(prevCollInstance, newTrait, icpiTree
   const centerPointNeighbours = icpiTree[`${centerPoint}:${newTrait}`] || [];
 
   const commonNeighbours = centerPointNeighbours.filter((centerNeighbour) => {
-    for (const prevInstancePoint of prevInstancePoints){
+    for (const prevInstancePoint of prevInstancePoints) {
       const prevInstancePointNeighb = icpiTree[`${prevInstancePoint}:${newTrait}`] || [];
-      const checkCommon = prevInstancePointNeighb.some((neighbour) => {
-        return neighbour === centerNeighbour;
-      });
+      const checkCommon = prevInstancePointNeighb.some((neighbour) => neighbour === centerNeighbour);
 
       if (!checkCommon) {
         return false;
@@ -25,9 +23,7 @@ module.exports = function generateInstances(prevCollInstance, newTrait, icpiTree
     return true;
   });
 
-  const newInstances = commonNeighbours.map((commonNeighbour) => {
-      return prevCollInstance.concat(commonNeighbour);
-  });
+  const newInstances = commonNeighbours.map((commonNeighbour) => prevCollInstance.concat(commonNeighbour));
 
   return newInstances;
 };
